@@ -36,7 +36,7 @@ class Replacer
         foreach ($post_ids as $id) {
             wp_update_post([
                 'ID' => $id,
-                'post_content' => str_replace($key_word, $replace_word, get_the_title($id))
+                'post_content' => str_replace($key_word, $replace_word, get_the_content($id))
             ]);
         }
         die();
